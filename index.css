@@ -1,30 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap');
-
-body {
-  font-family: 'Noto Sans', sans-serif;
-}
-/* Mobile: full width for each card */
-.extension {
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
-/* Tablet: 2 per row */
-@media (min-width: 768px) {
-  .extension {
-    width: calc(50% - 1rem);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-/* Desktop: 3 per row */
-@media (min-width: 1200px) {
-  .extension {
-    width: calc(33.33% - 1rem);
-  }
-}
 
 *{
     margin:0;
@@ -45,14 +19,10 @@ button{
 
 }
 
-h5{
-    font-size: 24px;
-    font-weight: 700;
-}
+
  p,h5{
     padding-left:40px;
     padding-top:5px;
-    font-size:16px ;
 }
 
 .header{
@@ -67,10 +37,9 @@ h5{
     margin-top: 10px;
 }
 body{
-  background-color:  #091540 ;
+    background-color: #141313;
     color: white;
-   
-    font-size: 16px;
+    font-family:[Noto Sans];
 }
 .list
 {
@@ -81,21 +50,15 @@ body{
     gap: 10px;
 }
 .list button{
-   background-color: hsl(225, 23%, 24%);
+   background-color: rgb(63, 62, 59);
    border: 1px solid black;
-    border-radius: 30px;
+    border-radius: 50%;
     justify-content: space-between;
     height:40px;
-     padding: 0 20px;  
-      white-space: nowrap;
-    color:hsl(0, 0%, 93%);
-    font-size: 16px;
-    font-weight: 400;
-   
-    
+    width: 60px;
 }
 .list button:hover{
-    background-color:hsl(3, 86%, 64%);
+    background-color: rgb(220, 73, 105);
 }
 
 .container {
@@ -103,13 +66,29 @@ body{
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
     gap: 10px;
     padding: 10px;
-    flex-wrap: nowrap;
+
+    /* Mobile: 1 column */
+    grid-template-columns: 1fr;
 }
+
+/* Tablet: 2 columns */
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 button:click{
-    background-color: hsl(3, 71%, 56%);
+    background-color: #e88206;
 }
 
    
@@ -206,10 +185,10 @@ button:click{
   width: 12px;
   border-radius: 50%;
   background: #e2e8f0;
-
+  transition: transform .25s ease, background .25s ease;
 }
 .status-dot.on {
-  background:hsl(3, 71%, 56%);            
+  background: #e88206;               /* green like screenshot’s “on” */
 }
 .status-dot.on::after {
   transform: translateX(12px);
