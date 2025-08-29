@@ -1,4 +1,30 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+/* Mobile: full width for each card */
+.extension {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* Tablet: 2 per row */
+@media (min-width: 768px) {
+  .extension {
+    width: calc(50% - 1rem);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+/* Desktop: 3 per row */
+@media (min-width: 1200px) {
+  .extension {
+    width: calc(33.33% - 1rem);
+  }
+}
 
 *{
     margin:0;
@@ -19,10 +45,14 @@ button{
 
 }
 
-
+h5{
+    font-size: 24px;
+    font-weight: 700;
+}
  p,h5{
     padding-left:40px;
     padding-top:5px;
+    font-size:16px ;
 }
 
 .header{
@@ -37,9 +67,10 @@ button{
     margin-top: 10px;
 }
 body{
-    background-color: #141313;
+  background-color:  #091540 ;
     color: white;
-    font-family:[Noto Sans];
+   
+    font-size: 16px;
 }
 .list
 {
@@ -50,15 +81,21 @@ body{
     gap: 10px;
 }
 .list button{
-   background-color: rgb(63, 62, 59);
+   background-color: hsl(225, 23%, 24%);
    border: 1px solid black;
-    border-radius: 50%;
+    border-radius: 30px;
     justify-content: space-between;
     height:40px;
-    width: 60px;
+     padding: 0 20px;  
+      white-space: nowrap;
+    color:hsl(0, 0%, 93%);
+    font-size: 16px;
+    font-weight: 400;
+   
+    
 }
 .list button:hover{
-    background-color: rgb(220, 73, 105);
+    background-color:hsl(3, 86%, 64%);
 }
 
 .container {
@@ -71,7 +108,7 @@ body{
     padding: 10px;
 }
 button:click{
-    background-color: #e88206;
+    background-color: hsl(3, 71%, 56%);
 }
 
    
@@ -168,10 +205,10 @@ button:click{
   width: 12px;
   border-radius: 50%;
   background: #e2e8f0;
-  transition: transform .25s ease, background .25s ease;
+
 }
 .status-dot.on {
-  background: #e88206;               /* green like screenshot’s “on” */
+  background:hsl(3, 71%, 56%);            
 }
 .status-dot.on::after {
   transform: translateX(12px);
